@@ -20,9 +20,24 @@ namespace ELso_alakamazas
                 
             }
             for (int i = 0; i < szamok.Length; i++)
-            {
+            { 
+                
                 Console.Write(szamok[i] + " ");
+                
+                
             }
+            int max = szamok[0];
+            for (int i = 0; i < 10; i++)
+            {
+                if (szamok[i] > max)
+                {
+                    max = szamok[i];
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("A legnagyobb: {0}", max);
+
+            Console.ReadKey();
         }
     }
 }
