@@ -35,8 +35,17 @@ namespace ELso_alakamazas
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("A legnagyobb: {0}", max);
-
+            Console.WriteLine("A legnagyobb szám: {0}", max);
+            int min = szamok[0];
+            for (int i = 0; i < 10; i++)
+            {
+                if (szamok[i] < min)
+                {
+                    min = szamok[i];
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("A legkisebb szám: {0}",min);
             Console.ReadKey();
         }
     }
