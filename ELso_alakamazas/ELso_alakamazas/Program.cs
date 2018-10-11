@@ -14,17 +14,25 @@ namespace ELso_alakamazas
             
             for (int i = 0; i < szamok.Length; i++)
             {
-                Console.Write("Kérem adjon meg egy számot: ");
-                szamok[i] = Convert.ToInt32(Console.ReadLine());
                 
-                
+                try
+                {
+                    Console.Write("Kérem adjon meg egy számot: ");
+                    szamok[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception hiba)
+                {
+
+                    Console.WriteLine("Nem számot írtál be!" + hiba);
+                }
+
             }
             for (int i = 0; i < szamok.Length; i++)
-            { 
-                
+            {
                 Console.Write(szamok[i] + " ");
+
                 
-                
+
             }
             int max = szamok[0];
             for (int i = 0; i < 10; i++)
@@ -46,6 +54,7 @@ namespace ELso_alakamazas
             }
             Console.WriteLine();
             Console.WriteLine("A legkisebb szám: {0}",min);
+           
             Console.ReadKey();
         }
     }
